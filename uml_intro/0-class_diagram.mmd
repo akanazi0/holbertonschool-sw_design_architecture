@@ -25,8 +25,8 @@ classDiagram
         +close_loan()
     }
 
-    Library o-- "*" Book : manages
-    Library o-- "*" User : registers
-    Library *-- "*" Loan : manages
-    Loan --> "1" Book : borrows
-    Loan --> "1" User : made_by
+    Library "1" o-- "*" Book : manages
+    Library "1" o-- "*" User : registers
+    Library "1" *-- "*" Loan : manages
+    Loan "1"--> "1" Book : borrows
+    Loan "*" --> "1" User : made_by
